@@ -274,6 +274,8 @@ layout {
 
   spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
 
+  spawn-sh-at-startup "exec \"$HOME/.nix-profile/bin/qs\""
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 

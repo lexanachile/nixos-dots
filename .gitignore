@@ -4,3 +4,7 @@ result-*
 *.swp
 *~
 .DS_Store
+
+# Quickshell states
+#dotfiles/quickshell/settings.json
+dotfiles/quickshell/.qmlls.ini
