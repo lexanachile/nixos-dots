@@ -6,6 +6,7 @@ in
 {
   home.packages = with pkgs; [
     niri
+    xwayland-satellite
   ];
 
   xdg.configFile."niri".source = 
