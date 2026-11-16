@@ -366,9 +366,11 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty" "-1"; }
-    Mod+B hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty" "-1"; }
+    Mod+B hotkey-overlay-title="Open Browser: Firefox" { spawn "firefox"; }
+    Mod+D hotkey-overlay-title="Run an Application: Walker" { spawn-sh "exec \"$HOME/.nix-profile/bin/walker\""; }
+    Mod+X hotkey-overlay-title="Open Clipboard: Elephant" { spawn-sh "exec \"$HOME/.nix-profile/bin/walker\" --modules clipboard"; }
+
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -395,8 +397,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "exec \"$HOME/.nix-profile/bin/brightnessctl\" --class=backlight set +5%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "exec \"$HOME/.nix-profile/bin/brightnessctl\" --class=backlight set 5%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,

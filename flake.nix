@@ -8,9 +8,15 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    elephant.url = "github:abenz1267/elephant";
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, ... }:
     let
       mkHome = {
         system,
@@ -36,6 +42,10 @@
             };
           }
         ];
+
+        extraSpecialArgs = {
+          inherit inputs;
+        };
       };
     in
     {

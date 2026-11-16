@@ -1,0 +1,37 @@
+theme = "default"
+close_when_open = true
+click_to_close = true
+selection_wrap = true
+disable_mouse = false
+
+[placeholders]
+default = { input = "Search..", list = "Nothing found" }
+clipboard = { input = "Clipboard..", list = "Clipboard empty" }
+
+[providers]
+default = ["desktopapplications", "calc"]
+empty = ["desktopapplications"]
+max_results = 45
+
+[[providers.prefixes]]
+prefix = ">"
+provider = "runner"
+
+[[providers.prefixes]]
+prefix = "/"
+provider = "files"
+
+[[providers.prefixes]]
+prefix = "="
+provider = "calc"
+
+[[providers.prefixes]]
+prefix = ";"
+provider = "providerlist"
+
+[[providers.prefixes]]
+prefix = ":"
+provider = "clipboard"
+
+[providers.clipboard]
+time_format = "relative"
