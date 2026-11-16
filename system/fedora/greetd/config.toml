@@ -1,0 +1,6 @@
+[terminal]
+vt = 1
+
+[default_session]
+user = "greetd"
+command = "/usr/bin/cage -s -mlast -d -- /usr/bin/regreet --config /etc/greetd/regreet.toml"

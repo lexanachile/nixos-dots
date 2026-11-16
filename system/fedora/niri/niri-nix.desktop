@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Niri (Nix)
+Comment=Niri Wayland session managed by Nix HM
+Exec=/home/aliaksei/.nix-profile/bin/niri-session
+Type=Application
+DesktopNames=niri

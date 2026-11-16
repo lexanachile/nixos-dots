@@ -1,0 +1,18 @@
+skip_selection = false
+
+[GTK]
+application_prefer_dark_theme = true
+cursor_theme_name = "Adwaita"
+font_name = "Cantarell 16"
+
+
+[appearance]
+greeting_msg = "yo!"
+
+[commands]
+reboot = ["systemctl", "reboot"]
+poweroff = ["systemctl", "poweroff"]
+
+[widget.clock]
+format = "%a %H:%M"
+resolution = "500ms"
