@@ -285,7 +285,9 @@ layout {
 
   spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
 
-  spawn-sh-at-startup "exec \"$HOME/.nix-profile/bin/qs\""
+  spawn-sh-at-startup "exec swaybg -i \"$HOME/nixos-dots/snippets/wallpapers/current.jpg\" -m fill"
+
+  // spawn-sh-at-startup "exec \"$HOME/.nix-profile/bin/qs\""
 
 
 
@@ -499,7 +501,7 @@ window-rule {
 
 window-rule {
   match app-id="org.telegram.desktop$"
-  match app-id="zen$"
+  match app-id="firefox$"
   match app-id="vesktop$"
   match app-id="thunar$"
   match app-id="obsidian$"

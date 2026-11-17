@@ -6,6 +6,7 @@
     ../modules/home/quickshell.nix
 
     ../modules/home/kitty.nix
+    ../modules/home/wallpapers.nix
     ../modules/home/walker.nix
     ../modules/home/brightness.nix
   ];
