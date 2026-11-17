@@ -14,7 +14,9 @@ Singleton {
     property bool focusModeEnabled: false
     property int focusModeMinutesLeft: 0
     
-    readonly property string configPath: `${Quickshell.env("HOME")}/.config/quickshell/settings.json`
+    readonly property string configPath:
+    Quickshell.statePath("settings.json")   
+    //readonly property string configPath: `${Quickshell.env("HOME")}/.config/quickshell/settings.json`
     
     property bool _loading: true
     property string _pendingJson: ""

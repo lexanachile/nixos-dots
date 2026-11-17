@@ -43,16 +43,16 @@ Item {
                 font.pixelSize: 12
                 font.weight: Font.Bold
                 font.family: "Inter"
-                opacity: 0.4
+                opacity: 1.0 // 0.4
                 
                 // Blinks once per second via timer instead of continuous animation
                 // to avoid constant GPU repaints
-                Timer {
-                    interval: 1000
-                    running: true
-                    repeat: true
-                    onTriggered: colonSeparator.opacity = colonSeparator.opacity === 1.0 ? 0.4 : 1.0
-                }
+                //Timer {
+                //    interval: 1000
+                //    running: true
+                //    repeat: true
+                //    onTriggered: colonSeparator.opacity = colonSeparator.opacity === 1.0 ? 0.4 : 1.0
+                //}
             }
             
             // Minutes
